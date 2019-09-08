@@ -15,69 +15,6 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
   <link rel="stylesheet" href="./css/theme/white.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -101,24 +38,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <p class="date">SADevs Meetup - September 2019</p>
 </section>
 
-<section id="slide-1" class="slide level2">
-<h2>Slide 1</h2>
-<aside class="notes">
-<p>Example Notes<br />
-Another bullet in the notes</p>
-</aside>
-</section>
-<section id="slide-2" class="slide level2">
-<h2>Slide 2</h2>
+<section id="what-is-geospatial" class="slide level2">
+<h2>What is geospatial?</h2>
 <ul>
-<li>with background image</li>
-<li>another bullet point</li>
+<li>Any data or system dealing with locations on Earth</li>
 </ul>
 </section>
-<section id="example-code-formatting" class="slide level2">
-<h2>Example Code Formatting</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="im">import</span> shapely</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="bu">print</span>(shapely.__version__)</a></code></pre></div>
+<section id="data-types" class="slide level2">
+<h2>Data Types</h2>
+<ul>
+<li>vector: points, lines, and polygons</li>
+<li>raster: cells in a grid</li>
+</ul>
+</section>
+<section id="data-structures" class="slide level2">
+<h2>Data Structures</h2>
+<ul>
+<li><p>points: tuple</p>
+<pre><code>(-98.632, 29.551)</code></pre></li>
+<li><p>lines: array of tuples</p>
+<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]</code></pre></li>
+<li><p>polygons: also array of tuples, where first and last tuple are the same</p>
+<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]</code></pre></li>
+</ul>
+</section>
+<section id="data-formats" class="slide level2">
+<h2>Data Formats</h2>
+<ul>
+<li>GeoJSON: open standard developed and maintained by IETF
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc7946">RFC 7946 - The GeoJSON Format</a></li>
+</ul></li>
+<li>shapefile
+<ul>
+<li>not a fully open standard, but widely used (the PDF of GIS data formats)</li>
+</ul></li>
+<li>well-known text (WKT) and well-known binary (WKB)</li>
+<li>raster: TIFF, and many others</li>
+</ul>
+</section>
+<section id="important-theoretical-concepts" class="slide level2">
+<h2>Important Theoretical Concepts</h2>
+<ul>
+<li>computational geometry</li>
+<li>graph theory</li>
+<li>tree structures (e.g. B-trees and R-trees)</li>
+</ul>
+</section>
+<section id="tools" class="slide level2">
+<h2>Tools</h2>
+</section>
+<section id="databases" class="slide level2">
+<h2>Databases</h2>
+<ul>
+<li>PostgreSQL (PostGIS)</li>
+<li>SQLite (SpatialLite)</li>
+<li>extensions to proprietary products (Oracle, SQL Server, etc.)</li>
+<li>NoSQL</li>
+<li>elastic</li>
+</ul>
+</section>
+<section id="core-libraries" class="slide level2">
+<h2>Core Libraries</h2>
+<ul>
+<li>fiona (Python): manipulating various data formats</li>
+<li>shapely (Python): perform geometric operations and spatial analysis</li>
+<li>GeoTools (Java): huge library with tools for pretty much any geo stuff you might need</li>
+<li>PROJ (C++): for working with map projections</li>
+<li>GDAL (C++): pretty much everything you need for working with raster data</li>
+<li><a href="https://github.com/sacridini/Awesome-Geospatial">Many more for lots of different languages</a></li>
+</ul>
+</section>
+<section id="web-mapping-sdks" class="slide level2">
+<h2>Web Mapping SDKs</h2>
+<ul>
+<li>OpenLayers: extremely robust framework for creating full-featured, web-based GIS apps</li>
+<li>leaflet: lightweight framework for creating responsive web maps</li>
+<li>Google Maps JavaScript API</li>
+</ul>
+</section>
+<section id="platforms" class="slide level2">
+<h2>Platforms</h2>
+<ul>
+<li>ArcGIS</li>
+<li>Mapbox</li>
+<li>Cartodb</li>
+<li>GeoServer: open-source, community supported</li>
+</ul>
+</section>
+<section id="new-hotness" class="slide level2">
+<h2>New Hotness</h2>
+<ul>
+<li>LIDAR and other high-resolution sensing</li>
+<li>indoor mapping</li>
+<li>image recognition and AI</li>
+<li>autonomous vehicles and telematics</li>
+</ul>
 </section>
     </div>
   </div>
