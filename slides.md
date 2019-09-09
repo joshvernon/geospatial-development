@@ -91,7 +91,7 @@ array of points - first and last point are the same
 
 
 ## Web Mapping SDKs
-- OpenLayers: extremely robust framework for creating full-featured, web-based GIS apps
+- OpenLayers: full-featured framework for creating web-based GIS apps
 - leaflet: lightweight framework for creating responsive web maps
 - Google Maps APIs
 
