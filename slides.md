@@ -1,31 +1,46 @@
 ---
 title: Geospatial Software Development
-author: Joshua Vernon, Software Developer, USAA
+author: Josh Vernon, Software Developer, USAA
 date: SADevs Meetup - September 2019
 ---
+
 
 ## What is geospatial?
 - Any data or system dealing with locations on Earth
 
 
 ## Data Types
-- vector: points, lines, and polygons
-- raster: cells in a grid
+- vector: discrete objects - points, lines, and polygons
+- raster: continuous surfaces - cells in a grid
 
 
-## Data Structures
-- points: tuple
-  ```
-  (-98.632, 29.551)
-  ```
-- lines: array of tuples
-  ```
-  [(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]
-  ```
-- polygons: also array of tuples, where first and last tuple are the same
-  ```
-  [(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]
-  ```
+##
+<h1>Data Structures</h1>
+
+
+## Point
+- tuple
+
+```
+(-98.632, 29.551)
+```
+![](images/point.png)
+
+
+## Line
+- array of points
+```
+[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]
+```
+![](images/line.png)
+
+
+## Polygon
+- array of points - first and last point are the same
+```
+[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]
+```
+![](images/polygon.png)
 
 
 ## Data Formats
@@ -37,13 +52,14 @@ date: SADevs Meetup - September 2019
 - raster: TIFF, and many others
 
 
-## Important Theoretical Concepts
+## Important Concepts
 - computational geometry
 - graph theory
 - tree structures (e.g. B-trees and R-trees)
 
 
-## Tools
+##
+<h1>Tools</h1>
 
 
 ## Databases
@@ -55,12 +71,12 @@ date: SADevs Meetup - September 2019
 
 
 ## Core Libraries
-- fiona (Python): manipulating various data formats
+- fiona (Python): easily read/write various data formats
 - shapely (Python): perform geometric operations and spatial analysis
-- GeoTools (Java): huge library with tools for pretty much any geo stuff you might need
+- GeoTools (Java): huge library with pretty much any geo stuff you might need
 - PROJ (C++): for working with map projections
-- GDAL (C++): pretty much everything you need for working with raster data
-- [Many more for lots of different languages](https://github.com/sacridini/Awesome-Geospatial)
+- GDAL (C++): everything you need for working with raster data
+- [Many more](https://github.com/sacridini/Awesome-Geospatial)
 
 
 ## Web Mapping SDKs
@@ -72,8 +88,8 @@ date: SADevs Meetup - September 2019
 ## Platforms
 - ArcGIS
 - Mapbox 
-- Cartodb
-- GeoServer: open-source, community supported
+- Carto
+- GeoServer
 
 
 ## New Hotness
@@ -81,3 +97,7 @@ date: SADevs Meetup - September 2019
 - indoor mapping
 - image recognition and AI
 - autonomous vehicles and telematics
+
+
+##
+<h1>Story Time</h1>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <meta name="author" content="Joshua Vernon, Software Developer, USAA">
+  <meta name="author" content="Josh Vernon, Software Developer, USAA">
   <title>Geospatial Software Development</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -34,7 +34,7 @@
 
 <section id="title-slide">
   <h1 class="title">Geospatial Software Development</h1>
-  <p class="author">Joshua Vernon, Software Developer, USAA</p>
+  <p class="author">Josh Vernon, Software Developer, USAA</p>
   <p class="date">SADevs Meetup - September 2019</p>
 </section>
 
@@ -47,20 +47,39 @@
 <section id="data-types" class="slide level2">
 <h2>Data Types</h2>
 <ul>
-<li>vector: points, lines, and polygons</li>
-<li>raster: cells in a grid</li>
+<li>vector: discrete objects - points, lines, and polygons</li>
+<li>raster: continuous surfaces - cells in a grid</li>
 </ul>
 </section>
-<section id="data-structures" class="slide level2">
-<h2>Data Structures</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<h1>
+Data Structures
+</h1>
+</section>
+<section id="point" class="slide level2">
+<h2>Point</h2>
 <ul>
-<li><p>points: tuple</p>
-<pre><code>(-98.632, 29.551)</code></pre></li>
-<li><p>lines: array of tuples</p>
-<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]</code></pre></li>
-<li><p>polygons: also array of tuples, where first and last tuple are the same</p>
-<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]</code></pre></li>
+<li>tuple</li>
 </ul>
+<pre><code>(-98.632, 29.551)</code></pre>
+<p><img data-src="images/point.png" /></p>
+</section>
+<section id="line" class="slide level2">
+<h2>Line</h2>
+<ul>
+<li>array of points</li>
+</ul>
+<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]</code></pre>
+<p><img data-src="images/line.png" /></p>
+</section>
+<section id="polygon" class="slide level2">
+<h2>Polygon</h2>
+<ul>
+<li>array of points - first and last point are the same</li>
+</ul>
+<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]</code></pre>
+<p><img data-src="images/polygon.png" /></p>
 </section>
 <section id="data-formats" class="slide level2">
 <h2>Data Formats</h2>
@@ -77,16 +96,19 @@
 <li>raster: TIFF, and many others</li>
 </ul>
 </section>
-<section id="important-theoretical-concepts" class="slide level2">
-<h2>Important Theoretical Concepts</h2>
+<section id="important-concepts" class="slide level2">
+<h2>Important Concepts</h2>
 <ul>
 <li>computational geometry</li>
 <li>graph theory</li>
 <li>tree structures (e.g. B-trees and R-trees)</li>
 </ul>
 </section>
-<section id="tools" class="slide level2">
-<h2>Tools</h2>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<h1>
+Tools
+</h1>
 </section>
 <section id="databases" class="slide level2">
 <h2>Databases</h2>
@@ -101,12 +123,12 @@
 <section id="core-libraries" class="slide level2">
 <h2>Core Libraries</h2>
 <ul>
-<li>fiona (Python): manipulating various data formats</li>
+<li>fiona (Python): easily read/write various data formats</li>
 <li>shapely (Python): perform geometric operations and spatial analysis</li>
-<li>GeoTools (Java): huge library with tools for pretty much any geo stuff you might need</li>
+<li>GeoTools (Java): huge library with pretty much any geo stuff you might need</li>
 <li>PROJ (C++): for working with map projections</li>
-<li>GDAL (C++): pretty much everything you need for working with raster data</li>
-<li><a href="https://github.com/sacridini/Awesome-Geospatial">Many more for lots of different languages</a></li>
+<li>GDAL (C++): everything you need for working with raster data</li>
+<li><a href="https://github.com/sacridini/Awesome-Geospatial">Many more</a></li>
 </ul>
 </section>
 <section id="web-mapping-sdks" class="slide level2">
@@ -122,8 +144,8 @@
 <ul>
 <li>ArcGIS</li>
 <li>Mapbox</li>
-<li>Cartodb</li>
-<li>GeoServer: open-source, community supported</li>
+<li>Carto</li>
+<li>GeoServer</li>
 </ul>
 </section>
 <section id="new-hotness" class="slide level2">
@@ -134,6 +156,12 @@
 <li>image recognition and AI</li>
 <li>autonomous vehicles and telematics</li>
 </ul>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<h1>
+Story Time
+</h1>
 </section>
     </div>
   </div>
