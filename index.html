@@ -39,9 +39,20 @@
 </section>
 
 <section id="what-is-geospatial" class="slide level2">
-<h2>What is geospatial?</h2>
+<h2>What is “geospatial”?</h2>
 <ul>
 <li>Any data or system dealing with locations on Earth</li>
+<li>And the analysis of that data to solve problems</li>
+</ul>
+<p>AKA - geographic information systems (<strong>GIS</strong>)</p>
+</section>
+<section id="geospatial-questions" class="slide level2">
+<h2>Geospatial Questions</h2>
+<ul>
+<li>How far away is something from something else?</li>
+<li>How are things distributed across space?</li>
+<li>What things exist (or don’t exist) near other things?</li>
+<li>What’s the optimal route between one location and another?</li>
 </ul>
 </section>
 <section id="data-types" class="slide level2">
@@ -59,41 +70,33 @@ Data Structures
 </section>
 <section id="point" class="slide level2">
 <h2>Point</h2>
-<ul>
-<li>tuple</li>
-</ul>
+<p>tuple of <code>(longitude, latitude)</code><br />
+or <code>(x, y)</code></p>
 <pre><code>(-98.632, 29.551)</code></pre>
 <p><img data-src="images/point.png" /></p>
 </section>
 <section id="line" class="slide level2">
 <h2>Line</h2>
-<ul>
-<li>array of points</li>
-</ul>
-<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465)]</code></pre>
+<p>array of points</p>
+<pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551)]</code></pre>
 <p><img data-src="images/line.png" /></p>
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<ul>
-<li>array of points - first and last point are the same</li>
-</ul>
+<p>array of points - first and last point are the same</p>
 <pre><code>[(-98.632, 29.551), (-98.522, 29.58), (-98.422, 29.551), (-98.538, 29.465), (-98.632, 29.551)]</code></pre>
 <p><img data-src="images/polygon.png" /></p>
 </section>
 <section id="data-formats" class="slide level2">
 <h2>Data Formats</h2>
 <ul>
-<li>GeoJSON: open standard developed and maintained by IETF
-<ul>
-<li><a href="https://tools.ietf.org/html/rfc7946">RFC 7946 - The GeoJSON Format</a></li>
-</ul></li>
+<li>GeoJSON: open IETF <a href="https://tools.ietf.org/html/rfc7946">standard</a></li>
 <li>shapefile
 <ul>
-<li>not a fully open standard, but widely used (the PDF of GIS data formats)</li>
+<li>not a fully open standard, but widely used</li>
 </ul></li>
 <li>well-known text (WKT) and well-known binary (WKB)</li>
-<li>raster: TIFF, and many others</li>
+<li>raster: (Geo)TIFF, and many others</li>
 </ul>
 </section>
 <section id="important-concepts" class="slide level2">
@@ -101,7 +104,8 @@ Data Structures
 <ul>
 <li>computational geometry</li>
 <li>graph theory</li>
-<li>tree structures (e.g. B-trees and R-trees)</li>
+<li>tree structures</li>
+<li>3D graphics</li>
 </ul>
 </section>
 <section id="section-1" class="slide level2">
@@ -123,11 +127,11 @@ Tools
 <section id="core-libraries" class="slide level2">
 <h2>Core Libraries</h2>
 <ul>
-<li>fiona (Python): easily read/write various data formats</li>
-<li>shapely (Python): perform geometric operations and spatial analysis</li>
-<li>GeoTools (Java): huge library with pretty much any geo stuff you might need</li>
-<li>PROJ (C++): for working with map projections</li>
-<li>GDAL (C++): everything you need for working with raster data</li>
+<li><strong>fiona</strong> (Python): easily read/write various vector data formats</li>
+<li><strong>shapely</strong> (Python): perform geometric operations and spatial analysis</li>
+<li><strong>GeoTools</strong> (Java): huge library with pretty much any geo stuff you might need</li>
+<li><strong>PROJ</strong> (C++): for working with map projections</li>
+<li><strong>GDAL</strong> (C++): everything you need for working with raster data</li>
 <li><a href="https://github.com/sacridini/Awesome-Geospatial">Many more</a></li>
 </ul>
 </section>
@@ -136,7 +140,7 @@ Tools
 <ul>
 <li>OpenLayers: extremely robust framework for creating full-featured, web-based GIS apps</li>
 <li>leaflet: lightweight framework for creating responsive web maps</li>
-<li>Google Maps JavaScript API</li>
+<li>Google Maps APIs</li>
 </ul>
 </section>
 <section id="platforms" class="slide level2">
@@ -151,10 +155,18 @@ Tools
 <section id="new-hotness" class="slide level2">
 <h2>New Hotness</h2>
 <ul>
-<li>LIDAR and other high-resolution sensing</li>
+<li>LIDAR and high-resolution sensing</li>
 <li>indoor mapping</li>
 <li>image recognition and AI</li>
 <li>autonomous vehicles and telematics</li>
+</ul>
+</section>
+<section id="more-info" class="slide level2">
+<h2>More Info</h2>
+<ul>
+<li><a href="https://www.paulbolstad.net/gisbook.html"><em>GIS Fundamentals</em></a> book, by Paul Bolstad</li>
+<li>libraries: <a href="https://github.com/sacridini/Awesome-Geospatial" class="uri">https://github.com/sacridini/Awesome-Geospatial</a></li>
+<li><a href="https://gisgeography.com/gis-applications-uses/">applications and use cases</a></li>
 </ul>
 </section>
 <section id="section-2" class="slide level2">
