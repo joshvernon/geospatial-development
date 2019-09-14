@@ -17,15 +17,28 @@ AKA - geographic information systems (**GIS**)
 - How are things distributed across space?
 - What things exist (or don't exist) near other things?
 - What's the optimal route between one location and another?
+- Can I trigger an event when a device crosses a boundary?
 
 
-## Data Types
-- vector: discrete objects - points, lines, and polygons
-- raster: continuous surfaces - cells in a grid
+## Important Concepts
+- geography
+  - [map projections](https://en.wikipedia.org/wiki/Map_projection)
+  - [spatial autocorrelation](https://en.wikipedia.org/wiki/Spatial_analysis#Spatial_dependency_or_auto-correlation)
+- computer science / math
+  - computational geometry
+  - graph theory
+  - tree structures
+  - 3D graphics
 
 
 ##
 <h1>Data Structures</h1>
+OGC/ISO [Simple Features](https://www.opengeospatial.org/standards/sfa) spec
+
+
+## Geospatial Data Types
+- vector: discrete objects - points, lines, and polygons
+- raster: continuous surfaces - cells in a grid
 
 
 ## Point
@@ -57,16 +70,8 @@ array of points - first and last point are the same
 ## Data Formats
 - GeoJSON: open IETF [standard](https://tools.ietf.org/html/rfc7946)
 - shapefile
-  - not a fully open standard, but widely used
 - well-known text (WKT) and well-known binary (WKB)
 - raster: (Geo)TIFF, and many others
-
-
-## Important Concepts
-- computational geometry
-- graph theory
-- tree structures
-- 3D graphics
 
 
 ##
@@ -75,8 +80,8 @@ array of points - first and last point are the same
 
 ## Databases
 - PostgreSQL (PostGIS)
-- SQLite (SpatialLite)
-- extensions to proprietary products (Oracle, SQL Server, etc.)
+- SQLite (SpatiaLite)
+- extensions to proprietary products
 - NoSQL
 - elastic
 
@@ -97,7 +102,7 @@ array of points - first and last point are the same
 
 
 ## Platforms
-- ArcGIS
+- ArcGIS (Esri)
 - Mapbox 
 - Carto
 - GeoServer
@@ -112,7 +117,7 @@ array of points - first and last point are the same
 
 ## More Info
 - [_GIS Fundamentals_](https://www.paulbolstad.net/gisbook.html) book, by Paul Bolstad
-- libraries: <https://github.com/sacridini/Awesome-Geospatial>
+- libraries and tools: <https://github.com/sacridini/Awesome-Geospatial>
 - [applications and use cases](https://gisgeography.com/gis-applications-uses/)
 
 
