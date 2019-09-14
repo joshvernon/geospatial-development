@@ -7,7 +7,7 @@
 ## Build this Presentation
 
 You will need to have `nvm` installed so you can ensure you are using the LTS version of Node.  
-You'll also need [pandoc](https://pandoc.org) to convert the `slides.md` markdown to Reveal.js slides.
+You'll also need [pandoc](https://pandoc.org) to convert the `slides.md` markdown file to Reveal.js slides.
 
 ```
 $ nvm install --lts
